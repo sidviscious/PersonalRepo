@@ -1,0 +1,18 @@
+FROM python:2.7-slim
+
+ADD . /app
+WORKDIR /app
+
+# Run updates, install basics and cleanup
+# - build-essential: Compile specific dependencies
+# - git-core: Checkout git repos
+RUN apt-get update -qq \
+    && apt-get install -y --no-install-recommends build-essential git-core openssl libssl-dev libffi6 libffi-dev curl \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+RUN pip install rasa_core
+
+RUN pip install rasa_nlu[spacy]
+RUN python -m spacy download en_core_web_md
+RUN python -m spacy link en_core_web_md en
