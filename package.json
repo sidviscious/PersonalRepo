@@ -1,0 +1,26 @@
+{
+  "name": "botapi",
+  "version": "1.0.0",
+  "description": "Bot Frame work APIs ",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sidviscious/PersonalRepo.git"
+  },
+  "author": "Sid Karnati",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sidviscious/PersonalRepo/issues"
+  },
+  "homepage": "https://github.com/sidviscious/PersonalRepo#readme",
+  "dependencies": {
+    "botbuilder": "^3.14.0",
+    "js-yaml": "^3.10.0",
+    "querystring": "^0.2.0",
+    "random-item": "^1.0.0",
+    "restify": "^6.3.4"
+  }
+}
